@@ -2,11 +2,13 @@ package com.example.dobleventana;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class SecondActivity extends ActionBarActivity {
 
+	private static final String TAG = "Segunda Ventana";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -30,5 +32,36 @@ public class SecondActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	//Metodos para el ccontrol del ciclo de vida de una Activity
+	@Override
+	protected void onStart() {
+		super.onStart();
+		Log.i(TAG, "onStart");
+	}
+	@Override
+	protected void onResume() {
+		super.onResume();
+		Log.i(TAG, "onResume");
+	}
+	@Override
+	protected void onPause() {
+		super.onPause();
+		Log.i(TAG, "onPause");
+	}
+	@Override
+	protected void onStop() {
+		super.onStop();
+		Log.i(TAG, "onStop");
+	}
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		Log.i(TAG, "onRestart");
+	}
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		Log.i(TAG, "onDestroy");
 	}
 }

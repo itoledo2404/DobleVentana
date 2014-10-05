@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Button;
 
 public class FirstActivity extends ActionBarActivity {
 
+	private static final String TAG = "Primera Ventana";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -49,5 +51,36 @@ public class FirstActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	//Metodos para el ccontrol del ciclo de vida de una Activity
+	@Override
+	protected void onStart() {
+		super.onStart();
+		Log.i(TAG, "onStart");
+	}
+	@Override
+	protected void onResume() {
+		super.onResume();
+		Log.i(TAG, "onResume");
+	}
+	@Override
+	protected void onPause() {
+		super.onPause();
+		Log.i(TAG, "onPause");
+	}
+	@Override
+	protected void onStop() {
+		super.onStop();
+		Log.i(TAG, "onStop");
+	}
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		Log.i(TAG, "onRestart");
+	}
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		Log.i(TAG, "onDestroy");
 	}
 }
