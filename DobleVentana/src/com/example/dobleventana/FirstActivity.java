@@ -1,7 +1,6 @@
 package com.example.dobleventana;
 
 
-
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.net.Uri;
@@ -23,7 +22,7 @@ public class FirstActivity extends ActionBarActivity {
 
 					@Override
 					public void onClick(View v) {
-						//Conb el intent lanzo la segunda ventana
+						//Con el intent lanzo la segunda ventana
 						Intent segunda = new Intent (FirstActivity.this,
 								SecondActivity.class);
 						startActivity(segunda);
